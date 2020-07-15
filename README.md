@@ -1,3 +1,5 @@
+Proyecto Personal de uso de la API de movie databes, como una prueba de practica de una entrevista de trabajo.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
