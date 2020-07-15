@@ -1,21 +1,10 @@
-import React from 'react'
+import React from "react";
+import Card from "./card"
 
-function Movielist() {
-    return (
-        <div className="movie-container">
-            <div>
-                Picture
-            </div>
-            <div>
-                <h3>
-                    Title
-                </h3>
-                <p>
-                    Desciption
-                </p>
-            </div>
-        </div>
-    )
+function Movielist(props) {
+    if (props.datos)return props.datos.map((movie)=><Card movie={movie} key={movie.id}></Card>)
+    else return(<p>Sin datos</p>)
+   
 }
 
-export default Movielist
+export default Movielist;
