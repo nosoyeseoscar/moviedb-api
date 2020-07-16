@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Searcher></Searcher>
+      {console.log(list)}
       <Movielist datos={list}></Movielist>
     </div>
   );
