@@ -38,7 +38,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <form onSubmit={handleSubmit}> 
-        <input onChange={handleChange} type="text" value={keyword} className="input-search"></input>
+        <input onChange={handleChange} type="text" value={keyword} className="input-search" placeholder="Search Terms"></input>
       </form>
       
         { list.length ?  <Movielist data={list}></Movielist> : <p>No hay datos</p>}
