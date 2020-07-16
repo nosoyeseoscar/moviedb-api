@@ -24,18 +24,20 @@
   margin: 20px;
 }
 
-.wrapper-movie {
+.movies-list{
+  margin: 10px;  
+}
+
+.movies-row{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+
+.movie-columns {  
   display: grid;
   grid-template-columns: 200px auto;
   grid-gap: 10px;
-  /* grid-auto-rows: minmax(100px, auto); */
 }
 
-.movies-list{
-  margin: 10px;
-}
-
-.tam-img{
-  width: 200px;
-}
 

@@ -24,8 +24,8 @@ function App() {
     <div className="App">
       <Header></Header>
       <Searcher></Searcher>
-      {console.log(list)}
-      <Movielist datos={list}></Movielist>
+        { list.length ?  <Movielist data={list}></Movielist> : <p>No hay datos</p>}
+      
     </div>
   );
 }
