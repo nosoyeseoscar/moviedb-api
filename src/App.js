@@ -6,23 +6,24 @@ import getMovies from "./services/getMovies";
 import popularMovies from "./services/popularMovies";
 
 function App() {
-  const [list, setlist] = useState([]);
-  const [keyword, setKeyword] = useState("");
+/*   const [list, setlist] = useState([]);
+ */  const [keyword, setKeyword] = useState("");
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const searchKeyword = getMovies(keyword);
-    searchKeyword.then((res) => setlist(res));
+    searchKeyword.then((res)=>console.log(res))
+    /* searchKeyword.then((res) => setlist(res)); */
   };
 
   const handleChange = (evt) => {
     setKeyword(evt.target.value);
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     const popular = popularMovies();
     popular.then((res) => setlist(res))
-  }, []);
+  }, []); */
 
   return (
     <div className="App">
@@ -37,7 +38,7 @@ function App() {
         ></input>
       </form>
 
-      {list.length ? <Movielist data={list}></Movielist> : <p>No hay datos</p>}
+      <Movielist></Movielist>
     </div>
   );
 }

@@ -1,12 +1,22 @@
-import React from "react";
-import Card from "./card"
+import React, { useState, useEffect } from "react";
+import Card from "./card";
+import popularMovies from "../services/popularMovies";
 
-function Movielist(props) {
-    return (
-      <div className="movies-list">
-        {  props.data.map((movie) => <Card movie={movie} key={movie.id}></Card>)}
-      </div>
-    )
+function Movielist() {
+  const [list, setlist] = useState([]);
+  
+  useEffect(() => {
+    const popular = popularMovies();
+    popular.then((res) => setlist(res));
+  }, []);
+
+  return (
+    <div className="movies-list">
+      {list.map((movie) => (
+        <Card movie={movie} key={movie.id}></Card>
+      ))}
+    </div>
+  );
 }
 
 export default Movielist;

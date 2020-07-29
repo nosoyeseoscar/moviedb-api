@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+
+
 
 function Searcher() {
-    return (
-        <div>
-            <input className="input-search"></input>
-        </div>
-    )
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        onChange={handleChange}
+        type="text"
+        value={keyword}
+        className="input-search"
+        placeholder="Search Terms"
+      ></input>
+    </form>
+  );
 }
 
-export default Searcher
+export default Searcher;
