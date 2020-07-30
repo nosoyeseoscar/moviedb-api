@@ -1,8 +1,7 @@
 import React from "react"; /* tamaño 500 = w500 */
+import { ReactComponent as Star } from "../star.svg";
 
-/*  baseUrlPoster = "https://image.tmdb.org/t/p/w500/"; */ function Card(
-  props
-) {
+export default function Card( props ) {
   return (
     <div className="movie-row">
       <div className="movie-columns">
@@ -14,11 +13,14 @@ import React from "react"; /* tamaño 500 = w500 */
         <div>
           <h3>{props.movie.title}</h3>
           <p>{props.movie.overview}</p>
+          <div>
+            <Star fill="#FFD700" width="4%"></Star>
+            <span className="vote">{props.movie.vote_average}</span>
+            
+          </div>
         </div>
       </div>
       <hr></hr> 
     </div>
   );
 }
-
-export default Card;

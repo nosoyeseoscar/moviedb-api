@@ -13,6 +13,7 @@ function Movielist({keyword}) {
       const listResults = popularMovies();
       listResults.then((res) => {
         setlist(res)
+        console.log(res);
         setLoading(false)
       })
       

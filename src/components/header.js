@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as Icono } from "../icono.svg";
+import { ReactComponent as Icono } from "../iconoMB.svg";
 
 function Header() {
     return (

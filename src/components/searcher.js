@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
+
+
 
 
 
 function Searcher() {
+  const [keyword, setKeyword] = useState("");
+
+  const handleChange = (evt) => {
+    setKeyword(evt.target.value);
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
       <input
         onChange={handleChange}
         type="text"
@@ -12,7 +19,6 @@ function Searcher() {
         className="input-search"
         placeholder="Search Terms"
       ></input>
-    </form>
   );
 }
 
